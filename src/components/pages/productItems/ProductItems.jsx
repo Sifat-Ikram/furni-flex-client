@@ -18,7 +18,7 @@ const ProductItems = () => {
 
   // Show all products if id === "all"
   const selectedProducts =
-    id === "all" ? products : products?.filter((item) => item.id == id);
+    id === "all" ? products : products?.filter((item) => item.id.toString() == id);
 
   if (!selectedProducts || selectedProducts.length === 0) {
     return <span className="loading loading-spinner loading-lg"></span>;

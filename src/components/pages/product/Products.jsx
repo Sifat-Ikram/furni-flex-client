@@ -18,7 +18,7 @@ const Products = () => {
             className={({ isActive }) =>
               isActive
                 ? "bg-black text-white py-2 pl-4 pr-36 rounded-md text-xl font-semibold"
-                : "py-2 pl-4 pr-32 rounded-md text-xl font-semibold hover:bg-black hover:text-white"
+                : "py-2 pl-4 pr-36 rounded-md text-xl font-semibold hover:bg-black hover:text-white"
             }
           >
             All

@@ -7,7 +7,7 @@ import flag from "../../assets/flag.png";
 const Footer = () => {
   return (
     <div className="w-full bg-black rounded-b-md">
-      <div className="flex max-md:flex-col justify-center w-4/5 mx-auto py-20">
+      <div className="flex max-md:flex-col justify-center w-4/5 mx-auto pb-10 pt-20">
         <div className="w-2/5">
           <a href="/" className="flex">
             <img src={logo} className="" />
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-4/5 mx-auto border-t-[1px] flex justify-between items-center border-solid py-10">
+      <div className="w-4/5 mx-auto border-t-[1px] flex justify-between items-center border-solid py-5">
         <div className="flex justify-between items-center">
           <div className="flex justify-center items-center gap-2">
             <FaFacebookF className="text-[#81859F] text-xl" />

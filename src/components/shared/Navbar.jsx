@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to={"/"}>Home</Link>
       </li>
       <li className="text-lg font-semibold py-2 flex justify-center items-center">
-        <Link to={"/product"}>Products</Link>
+        <Link to={`/product/productsItem/all`}>Products</Link>
       </li>
       <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/categories"}>Categories</Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal gap-3 px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end gap-5">
           <Link to="/cart" className="relative">

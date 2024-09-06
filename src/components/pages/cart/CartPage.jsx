@@ -112,7 +112,7 @@ const CartPage = () => {
               {cart?.map((item) => (
                 <div
                   key={item._id}
-                  className="flex items-center bg-base-200 p-5 border-b-2  rounded-md"
+                  className="flex items-center bg-base-200 p-5 gap-3 border-b-2  rounded-md"
                 >
                   <div className="flex justify-center items-center border-[1px] border-solid p-1">
                     <button
@@ -135,7 +135,7 @@ const CartPage = () => {
                       className="h-24 w-24 rounded-md py-2 bg-white"
                     />
                   </div>
-                  <div className="p-4 flex-1">
+                  <div className="flex-1">
                     <div className="flex justify-between">
                       <p className="font-bold">Name: {item.name}</p>
                       <button
@@ -180,7 +180,7 @@ const CartPage = () => {
               </div>
               <button
                 onClick={handleOrderFinal}
-                className="w-full p-3 bg-black text-white text-lg font-medium mt-5"
+                className="w-full p-3 bg-black text-white text-lg font-medium mt-5 rounded-sm"
               >
                 Go to Checkout
               </button>
