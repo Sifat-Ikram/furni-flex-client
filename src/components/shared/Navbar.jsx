@@ -2,27 +2,39 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { TbShoppingBag } from "react-icons/tb";
 import account from "../../assets/account.png";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const navLinks = (
     <>
-      <li className="text-lg font-semibold py-2">
+      <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/"}>Home</Link>
       </li>
-      <li className="text-lg font-semibold py-2">
+      <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/products"}>Products</Link>
       </li>
-      <li className="text-lg font-semibold py-2">
+      <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/categories"}>Categories</Link>
       </li>
-      <li className="text-lg font-semibold py-2">
+      <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/custom"}>Custom</Link>
       </li>
-      <li className="text-lg font-semibold py-2">
+      <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/blog"}>Blog</Link>
       </li>
     </>
   );
+
+  const handleLogOut = async () => {
+    try {
+      const res = await logOut();
+      console.log(res.user);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
 
   return (
     <div>
@@ -72,13 +84,27 @@ const Navbar = () => {
             >
               <img src={account} />
             </div>
-            <ul tabIndex={0} className="dropdown-content absolute w-40 flex flex-col justify-center items-center space-y-2 p-3 shadow-lg rounded-md">
-              <li className="w-full hover:bg-base-200 py-2 rounded-md text-center">
-                <Link to={"/login"}>Login</Link>
-              </li>
-              <li className="w-full hover:bg-base-200 py-2 rounded-md text-center">
-                <Link to={"/signUp"}>Sign Up</Link>
-              </li>
+            <ul
+              tabIndex={0}
+              className="dropdown-content absolute w-40 flex flex-col justify-center items-center space-y-2 p-3 shadow-lg rounded-md"
+            >
+              {user ? (
+                <button
+                  onClick={() => handleLogOut()}
+                  className="w-full hover:bg-base-200 py-2 rounded-md text-center"
+                >
+                  Logout
+                </button>
+              ) : (
+                <>
+                  <li className="w-full hover:bg-base-200 py-2 rounded-md text-center">
+                    <Link to={"/login"}>Login</Link>
+                  </li>
+                  <li className="w-full hover:bg-base-200 py-2 rounded-md text-center">
+                    <Link to={"/signUp"}>Sign Up</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>

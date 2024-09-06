@@ -17,7 +17,7 @@ const SignUp = () => {
   const location = useLocation();
   const { createUser, googleRegister } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, watch } = useForm();
   const [error, setError] = useState("");
 
   const togglePasswordVisibility = () => {
@@ -40,6 +40,8 @@ const SignUp = () => {
       })
       .catch((err) => console.error(err.message));
   };
+
+  const termsAgreed = watch("terms", false);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -88,7 +90,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="w-full flex max-md:flex-col justify-center">
+    <div className="w-full flex max-md:flex-col-reverse justify-center">
       <div className="md:w-1/2 flex justify-center items-center lg:px-[100px] md:px-[50px]">
         <div className="bg-base-200 rounded-md flex flex-col justify-center my-[50px] md:my-[100px] lg:my-[150px] items-center px-4 py-8">
           <div>
@@ -181,7 +183,12 @@ const SignUp = () => {
               <div className="">
                 <button
                   type="submit"
-                  className="w-full bg-black text-white py-4 text-base font-semibold rounded-md transition"
+                  className={`w-full py-4 text-base font-semibold rounded-md transition ${
+                    termsAgreed
+                      ? "bg-black text-white"
+                      : "bg-gray-400 text-gray-200"
+                  }`}
+                  disabled={!termsAgreed}
                 >
                   Signup
                 </button>

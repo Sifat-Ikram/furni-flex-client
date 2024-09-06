@@ -51,20 +51,20 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (observer) => {
       console.log("Watcher", observer);
       setUser(observer);
-         if (observer) {
-          const userInfo = { email: observer.email };
-          axiosPublic.post('/jwt', userInfo, {withCredentials: true})
-          .then(res =>{
-              if (res.data.token) {
-                  localStorage.setItem('access-token', res.data.token);
-                  setLoading(false);
-              }
-              else{
-                  localStorage.removeItem('access-token');
-                  setLoading(false);
-              }
-          })
-         }
+      //  if (observer) {
+      //   const userInfo = { email: observer.email };
+      //   axiosPublic.post('/jwt', userInfo, {withCredentials: true})
+      //   .then(res =>{
+      //       if (res.data.token) {
+      //           localStorage.setItem('access-token', res.data.token);
+      //           setLoading(false);
+      //       }
+      //       else{
+      //           localStorage.removeItem('access-token');
+      //           setLoading(false);
+      //       }
+      //   })
+      //  }
     });
     return () => {
       unSubscribe();
@@ -81,7 +81,9 @@ const AuthProvider = ({ children }) => {
     updateUserProfile,
   };
 
-  return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
 };
 
 export default AuthProvider;
