@@ -7,6 +7,12 @@ import Home from "./components/pages/home/Home.jsx";
 import Login from "./components/pages/login/Login.jsx";
 import SignUp from "./components/pages/signUp/SignUp.jsx";
 import AuthProvider from "./components/provider/AuthProvider.jsx";
+import Products from "./components/pages/product/Products.jsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ProductItems from "./components/pages/productItems/ProductItems.jsx";
+import CartPage from "./components/pages/cart/CartPage.jsx";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -16,6 +22,20 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/product",
+        element: <Products />,
+        children: [
+          {
+            path: "/product/productsItem/:id",
+            element: <ProductItems />,
+          },
+        ],
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
       },
     ],
   },
@@ -32,7 +52,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </AuthProvider>
   </StrictMode>
 );

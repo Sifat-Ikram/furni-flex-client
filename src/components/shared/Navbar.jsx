@@ -4,16 +4,21 @@ import { TbShoppingBag } from "react-icons/tb";
 import account from "../../assets/account.png";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import useCart from "../hooks/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart();
+
+  console.log(cart);
+
   const navLinks = (
     <>
       <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/"}>Home</Link>
       </li>
       <li className="text-lg font-semibold py-2 flex justify-center items-center">
-        <Link to={"/products"}>Products</Link>
+        <Link to={"/product"}>Products</Link>
       </li>
       <li className="text-lg font-semibold py-2 flex justify-center items-center">
         <Link to={"/categories"}>Categories</Link>
@@ -37,8 +42,8 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <div className="border-b-2 border-solid w-full">
+      <div className="navbar bg-base-100 md:w-5/6 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -75,7 +80,12 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end gap-5">
-          <TbShoppingBag className="text-3xl" />
+          <Link to="/cart" className="relative">
+            <TbShoppingBag className="text-3xl" />
+            <span className="absolute -right-2 -bottom-2 text-black text-xs font-semibold rounded-full w-5 h-5 flex justify-center items-center">
+              {cart.length || 0}
+            </span>
+          </Link>
           <div className="dropdown dropdown-end relative">
             <div
               tabIndex={0}
@@ -86,8 +96,12 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content absolute w-40 flex flex-col justify-center items-center space-y-2 p-3 shadow-lg rounded-md"
+              className="dropdown-content absolute w-48 flex flex-col justify-center bg-white items-center space-y-2 p-3 shadow-lg rounded-md"
             >
+              <div className="text-center my-2">
+                <h1 className="text-xl font-bold">{user?.displayName}</h1>
+                <h1 className="text-base font-semibold">{user?.email}</h1>
+              </div>
               {user ? (
                 <button
                   onClick={() => handleLogOut()}

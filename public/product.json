@@ -1,0 +1,182 @@
+[
+  {
+    "image": "https://i.ibb.co/1RY5Tb7/chair1.png",
+    "title": "Classic Rocking Chair",
+    "newPrice": 120,
+    "prevPrice": 150,
+    "discount": "20%",
+    "text": "A timeless wooden rocking chair perfect for your living room.",
+    "category": "Rocking chair",
+    "id": 1
+  },
+  {
+    "image": "https://i.ibb.co/Z8PCpHj/image-146.png",
+    "title": "Modern Side Chair",
+    "newPrice": 80,
+    "prevPrice": 100,
+    "discount": "20%",
+    "text": "Sleek and modern side chair, a great addition to any dining setup.",
+    "category": "Side chair",
+    "id": 2
+  },
+  {
+    "image": "https://i.ibb.co/4t4VMYG/Image.png",
+    "title": "Comfort Lounge Chair",
+    "newPrice": 200,
+    "prevPrice": 250,
+    "discount": "20%",
+    "text": "Relax in comfort with this cushioned lounge chair.",
+    "category": "Lounge chair",
+    "id": 3
+  },
+  {
+    "image": "https://i.ibb.co/yfcc0gN/Image-1.png",
+    "title": "Vintage Rocking Chair",
+    "newPrice": 130,
+    "prevPrice": 160,
+    "discount": "18%",
+    "text": "A beautiful vintage rocking chair with a natural finish.",
+    "category": "Rocking chair",
+    "id": 1
+  },
+  {
+    "image": "https://i.ibb.co/bdJwJDN/Image-2.png",
+    "title": "Elegant Side Chair",
+    "newPrice": 90,
+    "prevPrice": 110,
+    "discount": "18%",
+    "text": "Elegant and lightweight side chair for stylish seating.",
+    "category": "Side chair",
+    "id": 2
+  },
+  {
+    "image": "https://i.ibb.co/bvhgMhS/rocking-chair-with-padded-seat-1.png",
+    "title": "Luxury Lounge Chair",
+    "newPrice": 220,
+    "prevPrice": 280,
+    "discount": "21%",
+    "text": "Experience luxury with this high-end leather lounge chair.",
+    "category": "Lounge chair",
+    "id": 3
+  },
+  {
+    "image": "https://i.ibb.co/1RY5Tb7/chair1.png",
+    "title": "Minimalist Rocking Chair",
+    "newPrice": 110,
+    "prevPrice": 140,
+    "discount": "21%",
+    "text": "A minimalist take on the classic rocking chair.",
+    "category": "Rocking chair",
+    "id": 1
+  },
+  {
+    "image": "https://i.ibb.co/yfcc0gN/Image-1.png",
+    "title": "Wooden Side Chair",
+    "newPrice": 85,
+    "prevPrice": 105,
+    "discount": "19%",
+    "text": "Beautifully crafted wooden side chair for your home.",
+    "category": "Side chair",
+    "id": 2
+  },
+  {
+    "image": "https://i.ibb.co/4t4VMYG/Image.png",
+    "title": "Casual Lounge Chair",
+    "newPrice": 180,
+    "prevPrice": 220,
+    "discount": "18%",
+    "text": "Perfect for casual seating in a cozy environment.",
+    "category": "Lounge chair",
+    "id": 3
+  },
+  {
+    "image": "https://i.ibb.co/bvhgMhS/rocking-chair-with-padded-seat-1.png",
+    "title": "Contemporary Side Chair",
+    "newPrice": 95,
+    "prevPrice": 120,
+    "discount": "21%",
+    "text": "Contemporary design side chair with a sleek metal frame.",
+    "category": "Side chair",
+    "id": 2
+  },
+  {
+    "image": "https://i.ibb.co/bvhgMhS/rocking-chair-with-padded-seat-1.png",
+    "title": "Classic Wooden Rocking Chair",
+    "newPrice": 115,
+    "prevPrice": 140,
+    "discount": "18%",
+    "text": "A classic wooden rocking chair with a smooth finish for comfort.",
+    "category": "Rocking chair",
+    "id": 1
+  },
+  {
+    "image": "https://i.ibb.co/JHcMLwY/side-chair1.png",
+    "title": "Rustic Side Chair",
+    "newPrice": 75,
+    "prevPrice": 95,
+    "discount": "21%",
+    "text": "Rustic design side chair with a sturdy wooden frame.",
+    "category": "Side chair",
+    "id": 2
+  },
+  {
+    "image": "https://i.ibb.co/4t4VMYG/Image.png",
+    "title": "Luxury Leather Lounge Chair",
+    "newPrice": 210,
+    "prevPrice": 260,
+    "discount": "19%",
+    "text": "Premium leather lounge chair with a recline function for extra comfort.",
+    "category": "Lounge chair",
+    "id": 3
+  },
+  {
+    "image": "https://i.ibb.co/bvhgMhS/rocking-chair-with-padded-seat-1.png",
+    "title": "Modern Rocking Chair",
+    "newPrice": 125,
+    "prevPrice": 155,
+    "discount": "19%",
+    "text": "A sleek and modern take on the classic rocking chair.",
+    "category": "Rocking chair",
+    "id": 1
+  },
+  {
+    "image": "https://i.ibb.co/4t4VMYG/Image.png",
+    "title": "Elegant Dining Side Chair",
+    "newPrice": 85,
+    "prevPrice": 105,
+    "discount": "19%",
+    "text": "Elegant side chair designed for dining rooms with comfort and style.",
+    "category": "Side chair",
+    "id": 2
+  },
+  {
+    "image": "https://i.ibb.co/kQf8nyv/lounge-chair2.png",
+    "title": "Casual Comfort Lounge Chair",
+    "newPrice": 190,
+    "prevPrice": 240,
+    "discount": "21%",
+    "text": "Comfortable fabric lounge chair perfect for any living room.",
+    "category": "Lounge chair",
+    "id": 3
+  },
+  {
+    "image": "https://i.ibb.co/4t4VMYG/Image.png",
+    "title": "Vintage Wooden Rocking Chair",
+    "newPrice": 135,
+    "prevPrice": 170,
+    "discount": "20%",
+    "text": "A vintage-style rocking chair made from high-quality oak wood.",
+    "category": "Rocking chair",
+    "id": 1
+  },
+  {
+    "image": "https://i.ibb.co/bvhgMhS/rocking-chair-with-padded-seat-1.png",
+    "title": "Minimalist Side Chair",
+    "newPrice": 70,
+    "prevPrice": 90,
+    "discount": "22%",
+    "text": "A minimalist design side chair perfect for modern interiors.",
+    "category": "Side chair",
+    "id": 2
+  }
+]
