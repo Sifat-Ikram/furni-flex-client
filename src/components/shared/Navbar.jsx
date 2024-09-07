@@ -2,15 +2,17 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { TbShoppingBag } from "react-icons/tb";
 import account from "../../assets/account.png";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import useCart from "../hooks/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [cart] = useCart();
+  const [cart, cartRefetch] = useCart();
 
-  console.log(cart);
+  useEffect(() => {
+    cartRefetch();
+  }, [cartRefetch]);
 
   const navLinks = (
     <>
@@ -36,6 +38,7 @@ const Navbar = () => {
     try {
       const res = await logOut();
       console.log(res.user);
+      cartRefetch();
     } catch (err) {
       console.error(err.message);
     }
