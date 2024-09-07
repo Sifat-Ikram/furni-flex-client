@@ -9,7 +9,7 @@
 
 <p>This is ecommerce website. This repository contains all the frontend code. There is a another repository which contains the backend code.</p>
 <p>I have used node.js, express.js for backend and MongoDB as database.</p>
-<p> I have deployed the frontend in the firebase and deployed backend into vercel. Firebase is also used for user authentication.</p>
+<p> I have deployed the frontend in the firebase and backend into vercel. Firebase is also used for user authentication.</p>
 <p>Backend repository link: https://github.com/Sifat-Ikram/furni-flex-server</p>
 
 
