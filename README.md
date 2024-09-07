@@ -16,6 +16,7 @@
 Features:
 <ol>
   <li>This is ecommerce website.</li>
+  <li>A visitor can click the round image at the right side of the navbar to login or sign up. By clicking login or sign up button, it will take him/her to the login or signup page.</li>
   <li>An user can see products and add any product to the cart. To add an item to cart, user must be logged in otherwise clicking add to cart button will take him/her to the login page.</li>
   <li>After logging in, an user can go to the cart page. There is a cart icon in the navbar which can take him/her to the cart page. cart icon also shows how many item is added to the cart.</li>
   <li>In the cart page, an user can see the items that he/she added to the cart. User can increase or decrease quantity of the products. User can see total cost in the right side of the cart page.</li>
