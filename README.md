@@ -3,7 +3,7 @@
     Website Name: Furni Flex
   </li>
   <li>
-    Live link: [https://taste-trail-web.web.app/](https://furni-flex-web.web.app/)
+    Live link: https://furni-flex-web.web.app/
   </li>
 </ul>
 
